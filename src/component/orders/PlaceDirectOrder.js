@@ -135,7 +135,7 @@ class PlaceDirectOrder extends Component {
     return (
       <>
         <NavMain />
-        <form action="https://paytm-jwt.herokuapp.com/paynow" method="POST">
+        <form action="https://pawpaytm.herokuapp.com/paynow" method="POST">
           <div className="container text-center mt-5">
             <div className="row g-5">
               <div className="col-md-5 col-lg-4 order-md-last">
