@@ -1,0 +1,9 @@
+.search-results :hover {
+  cursor: pointer;
+  background-color: #ff7716;
+}
+.search-items-list {
+  margin-top: 5%;
+  height: 406px;
+  overflow: auto;
+}

@@ -1,0 +1,541 @@
+/* <!-- Nav bar --> */
+.icon {
+  height: 70px;
+  width: 70px;
+}
+.temp {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+.nav-bar {
+  height: 550px;
+  width: 100%;
+  background-image: url("https://i.ibb.co/GdFKKvC/golden-retriver.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.nav-items {
+  margin: 1% 10px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.font-color {
+  color: rgb(255, 247, 247);
+}
+.font-color:hover {
+  color: #000;
+}
+.navbar {
+  margin-right: 5%;
+}
+.navbar-brand > span {
+  font-size: 3rem;
+  color: #fff;
+  margin-left: 10%;
+}
+.navbar-heading {
+  font-family: "Pacifico", cursive;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.navbar-heading:hover {
+  color: #fff;
+}
+/* <!-- header section --> */
+.jumbotron {
+  margin-left: 7%;
+  margin-right: 7%;
+  position: absolute;
+  margin-top: 27%;
+  height: 350px;
+  width: 86%;
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px rgb(216, 213, 213);
+}
+.header-sub > h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(71, 70, 70);
+  margin-top: 3%;
+}
+
+.material-symbols-outlined {
+  font-size: 1.7rem;
+}
+.header-para {
+  text-align: center;
+}
+.link-card-sub {
+  margin: 2%;
+}
+#link-cards {
+  /* border: 2px solid green; */
+  width: 98%;
+  height: 100px;
+  margin: auto 1% auto 4%;
+  display: inline-block;
+}
+.card-container {
+  border: 1px solid rgb(216, 211, 211);
+  width: 30%;
+  height: 90px;
+  float: left;
+  margin-right: 2.5%;
+  border-radius: 3px;
+}
+.card-container:hover {
+  border: 2px solid #ff7716;
+  box-shadow: 0px 0px 5px #ff7716;
+  transition: all 0.2s ease-in;
+}
+.card-container:visited {
+  background-color: #ff7716;
+}
+.card-class-override {
+  margin-left: 2.5%;
+}
+
+.card-container-img-sub {
+  width: 25%;
+  height: 100px;
+  float: left;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.card-container-img-sub > img {
+  margin-top: 15%;
+  border-radius: 50%;
+  width: 70%;
+  background-color: orangered;
+}
+.img-class-override > img {
+  background-color: yellow;
+}
+
+.card-content {
+  margin: 2% 10% auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(110, 109, 109);
+}
+.card-content-sub {
+  color: rgb(110, 109, 109);
+  font-size: 1rem;
+}
+
+/* <!-- Select section --> */
+.search {
+  margin: 1% auto auto 3%;
+  display: inline-block;
+}
+.location {
+  width: 30%;
+  height: 75px;
+  margin-left: 3%;
+  float: left;
+}
+.location-button {
+  width: 21%;
+  height: 75px;
+  float: left;
+  margin-left: 3%;
+}
+.search-label {
+  font-size: 0.8rem;
+  color: rgb(110, 109, 109);
+  font-weight: bold;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.search-button {
+  background-color: #ff7716;
+  margin-top: 12%;
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.search-button:hover {
+  background-color: #fc8835;
+  color: #fff;
+}
+/* <!-- Service section --> */
+#service {
+  margin: 70px 10% auto;
+}
+.dark_mode {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 300px auto 2%;
+  color: rgb(71, 70, 70);
+}
+.dark_mode_btn {
+  text-align: center;
+  margin: auto auto 2%;
+}
+.service-heading {
+  text-align: center;
+  color: rgb(71, 70, 70);
+  margin-bottom: 5%;
+}
+.heading {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  margin-top: 25%;
+}
+.service-provided {
+  height: 500px;
+}
+.service-info {
+  width: 50%;
+  height: 600px;
+  float: left;
+}
+.service-booking {
+  width: 50%;
+  height: 600px;
+  float: left;
+}
+
+.card-body > a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(112, 104, 233);
+}
+.card-text {
+  margin: 0;
+}
+.card-title {
+  font-size: 1.2rem;
+  color: rgb(110, 109, 109);
+  font-weight: bold;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: rgb(110, 109, 109);
+}
+.service-booking-content {
+  display: inline-block;
+}
+.service-img {
+  margin: 20% 5% auto;
+  height: 70px;
+  width: 90%;
+}
+.service-booking-content-img {
+  float: left;
+}
+.service-booking-card-text {
+  font-size: 1rem;
+  color: rgb(110, 109, 109);
+}
+.service-booking-submit {
+  margin: 2.5rem 10% 2%;
+  text-align: center;
+}
+.service-booking-submit-button,
+.vet-price-btn {
+  width: 90%;
+  height: 45px;
+  background-color: #ff7716;
+  border: #ff7716;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.service-booking-submit-button,
+.vet-price-btn:hover {
+  background-color: #fc8835;
+  color: #fff;
+}
+.outside-text {
+  margin-top: 4%;
+}
+/* <!-- info section --> */
+.information-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(71, 70, 70);
+  margin: 0;
+}
+.sub-info {
+  display: inline-block;
+  margin: auto 5% auto;
+}
+.sub-info-category {
+  float: left;
+  margin-right: 95px;
+}
+.info-override {
+  margin: 0;
+}
+.sub-info-title {
+  text-align: center;
+  color: rgb(71, 70, 70);
+  font-weight: bold;
+}
+.sub-info-category-img {
+  text-align: center;
+}
+.sub-info-category-img > svg {
+  margin-bottom: 1rem;
+  color: rgb(71, 70, 70);
+}
+.sub-info-para-content {
+  font-size: 0.9rem;
+  color: rgb(71, 70, 70);
+  font-weight: bold;
+}
+.info-sub-display {
+  padding-top: 0;
+}
+/* <!-- Testimony Section --> */
+#testimony {
+  width: 80%;
+  height: 550px;
+  margin: 10% 10% auto;
+}
+.testimony-img {
+  width: 100%;
+  height: 550px;
+  background-image: url("https://i.ibb.co/CKyXC0X/pet-owner.jpg");
+  background-size: 100% 550px;
+}
+.testimony-content {
+  position: absolute;
+  margin: 3% auto auto 15%;
+  border: 0.063rem solid rgb(216, 216, 216);
+  border-radius: 0.313rem;
+  width: 30%;
+  height: 17.188rem;
+  background-color: white;
+}
+.testimony-content-box {
+  color: rgb(71, 70, 70);
+  /* font-size: 1.5rem; */
+  font-weight: bold;
+  margin: 5%;
+}
+.testimony-content-para {
+  color: rgb(71, 70, 70);
+  margin: 5%;
+}
+.testimony-content-para > a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.testimony-hr {
+  margin: 5% 85% auto 5%;
+  height: 4px;
+  border: none;
+  background-color: black;
+}
+.testimony-span {
+  color: #ff7716;
+}
+/* <!-- Review Section --> */
+#review {
+  width: 80%;
+  height: 500px;
+  margin: 5% 10% auto;
+}
+.review-title {
+  text-align: center;
+  color: rgb(71, 70, 70);
+}
+/* ------------------------------- */
+
+.align-center {
+  text-align: center;
+}
+.hash-list {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hash-list.cols-3 > li:nth-last-child(-n + 3) {
+    border-bottom: none;
+  }
+}
+@media (min-width: 768px) {
+  .hash-list.cols-3 > li {
+    width: 33.3333%;
+  }
+}
+.hash-list > li {
+  display: block;
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.pad-30-all > * {
+  padding: 30px;
+}
+.mgb-20,
+.mgb-20-all > * {
+  margin-bottom: 20px;
+}
+.wpx-100,
+.wpx-100-after:after {
+  width: 100px;
+}
+.img-round,
+.img-rel-round {
+  border-radius: 50%;
+}
+.padb-30,
+.padb-30-all > * {
+  padding-bottom: 30px;
+}
+.mgb-40,
+.mgb-40-all > * {
+  margin-bottom: 40px;
+}
+.font-cond-b {
+  font-weight: 700 !important;
+}
+.fs-110,
+.font-cond {
+  color: #000;
+}
+.stars {
+  margin-bottom: 5%;
+}
+.font-cond-l {
+  margin-bottom: 2%;
+}
+/* ------------------------------- */
+/* <!-- Youtube video --> */
+#youtube-video {
+  width: 80%;
+  height: 500px;
+  margin: 10% 10% 5%;
+}
+/* <!-- Service Partners --> */
+.service-partners-title {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(71, 70, 70);
+  margin-top: 2%;
+}
+.service-partners-card {
+  margin-top: 5%;
+}
+/* .service-card > img {
+  height: 100px;
+} */
+.bi-star-fill {
+  color: gold;
+}
+.card-padding {
+  height: 150px;
+}
+.repeat {
+  margin-left: 3%;
+  font-size: 1rem;
+  font-weight: lighter;
+  line-height: normal;
+}
+/* <!-- Book Service --> */
+#book-service {
+  margin: 5% auto auto;
+  height: 500px;
+  text-align: center;
+}
+.service-icons {
+  text-align: center;
+  color: rgb(71, 70, 70);
+}
+.service-content {
+  text-align: center;
+  margin: 2%;
+  color: rgb(71, 70, 70);
+}
+.service-submit-btn {
+  height: 60px;
+  width: 25%;
+  background-color: #ff7716;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: 4px 4px 4px grey;
+}
+.service-img-dog {
+  width: 60%;
+  height: 300px;
+  margin: 2% 20% auto;
+}
+.service-img-dog > img {
+  height: 300px;
+  width: 300px;
+}
+.faq {
+  width: 80%;
+  margin: 5% auto 5%;
+  text-align: center;
+}
+.faq-btn {
+  border-bottom: 1px solid rgb(20, 20, 20);
+  border-radius: 0;
+  font-size: 1rem;
+  width: 60%;
+}
+
+/* <!-- Footer Section --> */
+footer {
+  background-color: #18273c;
+}
+#footer {
+  width: 100%;
+  height: 250px;
+  display: inline-block;
+}
+.footer-main {
+  width: 10%;
+  float: left;
+  margin: 3% auto 0 16%;
+}
+.footer-title {
+  font-size: 0.8rem;
+}
+.footer-main-override {
+  margin-left: 5%;
+}
+#sub-footer {
+  width: 100%;
+  height: 70px;
+  background-color: #242d62;
+  color: rgb(189, 185, 185);
+  display: inline-block;
+}
+.left-footer {
+  float: left;
+  margin: 2% 10% auto;
+  width: 50%;
+}
+
+.right-footer {
+  float: left;
+  margin-top: 2%;
+}
+.footer-title {
+  color: #b4b4b4;
+}
+
+ul {
+  color: #fff;
+}
