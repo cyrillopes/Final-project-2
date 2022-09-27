@@ -6,14 +6,27 @@ class ShopFilter extends Component {
   filterByBrand = (event) => {
     let category_id = this.props.category_id;
     let brand = event.target.value;
+    sessionStorage.setItem("category", brand);
     let itemUrl;
-    if (brand === " ") {
-      itemUrl = `${url}/${category_id}`;
+    let lcost = sessionStorage.getItem("lcost");
+    let hcost = sessionStorage.getItem("hcost");
+    if (!hcost && lcost) {
+      if (brand === " ") {
+        itemUrl = `${url}/${category_id}`;
+      } else {
+        itemUrl = `${url}/${category_id}?brand=${brand}`;
+      }
+      axios.get(itemUrl).then((res) => this.props.itemPerBrand(res.data));
     } else {
-      itemUrl = `${url}/${category_id}?brand=${brand}`;
+      if (brand === " ") {
+        itemUrl = `${url}/${category_id}`;
+      } else {
+        itemUrl = `${url}/${category_id}?brand=${brand}&hcost=${hcost}&lcost=${lcost}`;
+      }
+      axios.get(itemUrl).then((res) => this.props.itemPerBrand(res.data));
     }
-    axios.get(itemUrl).then((res) => this.props.itemPerBrand(res.data));
   };
+
   render() {
     return (
       <div className=" mt-lg-2 w-auto p-0" onChange={this.filterByBrand}>

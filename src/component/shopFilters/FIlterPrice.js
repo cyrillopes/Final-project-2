@@ -8,14 +8,28 @@ class FilterPrice extends Component {
     let cost = event.target.value.split("-");
     let lcost = cost[0];
     let hcost = cost[1];
+    sessionStorage.setItem("hcost", hcost);
+    sessionStorage.setItem("lcost", lcost);
     let itemUrl;
-    if (event.target.value === " ") {
-      itemUrl = `${url}/${category_id}?sort=${-1}`;
+    if (!sessionStorage.getItem("category")) {
+      if (event.target.value === " ") {
+        itemUrl = `${url}/${category_id}?sort=${-1}`;
+      } else {
+        itemUrl = `${url}/${category_id}?lcost=${lcost}&hcost=${hcost}`;
+      }
+      axios.get(itemUrl).then((res) => this.props.itemPerPrice(res.data));
     } else {
-      itemUrl = `${url}/${category_id}?lcost=${lcost}&hcost=${hcost}`;
+      if (event.target.value === " ") {
+        itemUrl = `${url}/${category_id}?sort=${-1}`;
+      } else {
+        itemUrl = `${url}/${category_id}?lcost=${lcost}&hcost=${hcost}&brand=${sessionStorage.getItem(
+          "category"
+        )}`;
+      }
+      axios.get(itemUrl).then((res) => this.props.itemPerPrice(res.data));
     }
-    axios.get(itemUrl).then((res) => this.props.itemPerPrice(res.data));
   };
+
   render() {
     return (
       <div className=" mt-lg-2 w-25 p-0" onChange={this.filterByPrice}>

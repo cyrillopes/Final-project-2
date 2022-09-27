@@ -74,42 +74,6 @@ class PlaceDirectOrder extends Component {
       });
     }
   };
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // loadScript = (src) => {
-  //   return new Promise((resolve) => {
-  //     const script = document.createElement("script");
-  //     script.src = src;
-  //     script.onload = () => {
-  //       resolve(true);
-  //     };
-  //     script.onerror = () => {
-  //       resolve(false);
-  //     };
-  //     document.body.appendChild(script);
-  //   });
-  // };
-  // displayRazorPay = async (amount) => {
-  //   const res = await this.loadScript(
-  //     `https://checkout.razorpay.com/v1/checkout.js`
-  //   );
-  //   if (!res) {
-  //     alert("You are offline! Failed to load RazorPay SDK...");
-  //     return;
-  //   }
-  //   const options = {
-  //     key: "rzp_test_N3iu3mvJS9OKSv",
-  //     currency: "INR",
-  //     amount: amount * 100,
-  //     name: "Code with Cyril",
-  //     description: "Just for testing",
-  //     image: "https://mern-blog-akky.herokuapp.com/static/media/logo",
-
-  //     handler: function (res) {
-  //       alert(res.razorpay_payment_id);
-  //     },
-  //   };
-  // };
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   render() {
     if (
