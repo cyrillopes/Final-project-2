@@ -104,7 +104,7 @@ class PlaceOrder extends Component {
       <>
         <NavMain />
         <form action="https://pawpaytm.herokuapp.com/paynow" method="POST">
-          <div className="card mb-5 mt-3">
+          <div className="card cart-card mb-5 mt-3">
             <div className="row">
               <div className="col-md-8 cart">
                 <div className="title">

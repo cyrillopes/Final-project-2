@@ -27,7 +27,7 @@ const IndexHeader = () => {
             <span className="material-symbols-outlined">pets</span> For
             Adoption: The Pet People
           </h1>
-          <p className="header-para">
+          <p className="header-para mb-3">
             Book Pet Care Service Appointments At Home
           </p>
         </div>

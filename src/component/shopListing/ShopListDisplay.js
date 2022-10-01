@@ -67,7 +67,7 @@ const ShopListDisplay = (props) => {
                       </button>
                     </Link>
                     <button
-                      className="btn-shop btn rounded-0 w-100 mt-2 ms-2"
+                      className="btn-shop btn rounded-0 w-100 mt-2"
                       onClick={() => handleClick(item)}
                     >
                       Add to Cart

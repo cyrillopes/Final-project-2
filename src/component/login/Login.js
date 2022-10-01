@@ -65,7 +65,7 @@ class Login extends Component {
                       <img
                         src="https://i.ibb.co/d0xV5Sy/login.jpg"
                         alt="login form"
-                        className="img-fluid cover-full"
+                        className="img-fluid cover-full h-100 w-100"
                         style={{ borderRadius: "1rem 0 0 1rem" }}
                       />
                     </div>

@@ -45,7 +45,7 @@ class Register extends Component {
                         <img
                           src="https://i.ibb.co/q5bfST1/register.jpg"
                           alt="register"
-                          className="img-fluid"
+                          className="img-fluid  h-100 w-100"
                         />
                       </div>
                       <div className="col-xl-6">
