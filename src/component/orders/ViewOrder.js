@@ -22,7 +22,6 @@ class ViewOrder extends Component {
   componentDidMount() {
     if (this.props.location) {
       let query = this.props.location.search.split("&");
-      console.log(query);
       if (query) {
         let data = {
           status: query[0].split("=")[1],

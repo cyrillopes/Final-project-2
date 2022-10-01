@@ -12,6 +12,7 @@ class NavMain extends Component {
       userData: "",
       userName: "",
       userImg: "",
+      cart: this.props.ordersOutsideClass,
     };
   }
   reload = (url) => {

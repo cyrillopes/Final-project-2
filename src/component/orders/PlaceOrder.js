@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavMain from "../headers/NavMain";
+import "../../css/product.css";
 let orderId = [];
 
 const url = "https://paws-for-adoption.herokuapp.com/pawItem";
@@ -46,31 +47,35 @@ class PlaceOrder extends Component {
     if (data) {
       return data.map((item) => {
         return (
-          <li
-            className="list-group-item d-flex justify-content-between lh-sm"
-            key={item._id}
-          >
-            <div>
-              <h6 className="my-0">{item.item_name}</h6>
-              <small className="text-muted text-lowercase">
-                Color:
-                {sessionStorage.getItem("color")
-                  ? sessionStorage.getItem("color")
-                  : item.color[0]}
-              </small>
-              <br />
-              <small className="text-muted text-lowercase">
-                Size:
-                {sessionStorage.getItem("size")
-                  ? sessionStorage.getItem("size")
-                  : item.size[0]}
-              </small>
-              <div className="p-2">
-                <img src={item.img_url[0]} alt="Menu img" className="w-50 " />
+          <div className="row" key={item._id}>
+            <div className="row main align-items-center">
+              <div className="col-2">
+                <img
+                  className="img-fluid"
+                  style={{ width: "80px", height: "100px" }}
+                  src={item.img_url[0]}
+                  alt=""
+                />
               </div>
+              <div className="col">
+                <div className="row">{item.item_name}</div>
+                <div className="row text-muted">
+                  Color:
+                  {sessionStorage.getItem("color")
+                    ? sessionStorage.getItem("color")
+                    : item.color[0]}
+                </div>
+                <div className="row text-muted">
+                  Size:
+                  {sessionStorage.getItem("size")
+                    ? sessionStorage.getItem("size")
+                    : item.size[0]}
+                </div>
+              </div>
+              <div className="col ms-5">{item.title}</div>
+              <div className="col ms-5">₹{item.price}</div>
             </div>
-            <span className="text-muted">₹{item.price}</span>
-          </li>
+          </div>
         );
       });
     }
@@ -99,46 +104,35 @@ class PlaceOrder extends Component {
       <>
         <NavMain />
         <form action="https://pawpaytm.herokuapp.com/paynow" method="POST">
-          <div className="container text-center mt-5">
-            <div className="row g-5">
-              <div className="col-md-5 col-lg-4 order-md-last">
-                <h4 className="d-flex justify-content-between align-items-center mb-3">
-                  <span style={{ color: "#18273c" }}>Your cart</span>
-                  <span
-                    className="badge rounded-pill"
-                    style={{
-                      backgroundColor: "#18273c",
-                      color: "white",
-                    }}
-                  >
-                    {orderId.length}
-                  </span>
-                </h4>
-
-                <ul className="list-group mb-3">
-                  {this.renderItem(this.state.items)}
-
-                  <li className="list-group-item d-flex justify-content-between">
-                    <span>Total (RS)</span>
-                    <strong>{this.state.cost}</strong>
-                  </li>
-                </ul>
-                <button
-                  className="w-100 btn  btn-lg mt-4"
-                  style={{
-                    backgroundColor: "#fd7e14",
-                    color: "white",
-                    marginBottom: "20%",
-                  }}
-                  type="submit"
-                  onClick={this.checkout}
-                >
-                  Continue to checkout
-                </button>
+          <div className="card mb-5 mt-3">
+            <div className="row">
+              <div className="col-md-8 cart">
+                <div className="title">
+                  <div className="row">
+                    <div className="col">
+                      <h4>
+                        <b>Your Cart</b>
+                      </h4>
+                    </div>
+                    <div className="col align-self-center text-right text-muted">
+                      {orderId.length} items
+                    </div>
+                  </div>
+                </div>
+                {this.renderItem(this.state.items)}
               </div>
-
-              <div className="col-md-7 col-lg-8">
-                <h4 className="mb-3">Billing address</h4>
+              <div className="col-md-4 summary">
+                <div>
+                  <h5>
+                    <b>Billing Address</b>
+                  </h5>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col mb-3" style={{ paddingLeft: "0" }}>
+                    ITEMS {orderId.length}
+                  </div>
+                </div>
                 <input type="hidden" value={this.state.id} name="id" />
                 <input type="hidden" value={this.state.cost} name="cost" />
                 <input
@@ -146,69 +140,61 @@ class PlaceOrder extends Component {
                   value={this.state.category}
                   name="category"
                 />
-
-                <div className="row g-3">
-                  <div className="col-sm-6">
-                    <label htmlFor="firstName" className="form-label">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value={this.state.name}
-                      name="name"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-
-                  <div className="col-6">
-                    <label htmlFor="email" className="form-label">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      placeholder="you@example.com"
-                      value={this.state.email}
-                      onChange={this.handleChange}
-                    />
-                  </div>
-
-                  <div className="col-6">
-                    <label htmlFor="address" className="form-label">
-                      Contact
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="phone"
-                      placeholder="0123456789"
-                      required
-                      value={this.state.phone}
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="col-6">
-                    <label htmlFor="address" className="form-label">
-                      Address
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="address"
-                      placeholder="Example: 1234 Main St"
-                      value={this.state.address}
-                      onChange={this.handleChange}
-                      required
-                    />
-                  </div>
+                <p>Name</p>
+                <input
+                  type="text"
+                  id="code"
+                  placeholder="Your Name"
+                  value={this.state.name}
+                  name="name"
+                  onChange={this.handleChange}
+                />
+                <p>Email Address</p>
+                <input
+                  id="code"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                />
+                <p>Phone</p>
+                <input
+                  type="text"
+                  id="code"
+                  placeholder="+91"
+                  name="phone"
+                  required
+                  value={this.state.phone}
+                  onChange={this.handleChange}
+                />
+                <p>Address</p>
+                <input
+                  id="code"
+                  type="text"
+                  name="address"
+                  placeholder="Example: 1234 Main St"
+                  value={this.state.address}
+                  onChange={this.handleChange}
+                  required
+                />
+                <div
+                  className="row"
+                  style={{
+                    borderTop: "1px solid rgba(0,0,0,.1)",
+                    padding: " 2vh 0",
+                  }}
+                >
+                  <div className="col">TOTAL PRICE</div>
+                  <div className="col text-right">₹{this.state.cost}</div>
                 </div>
-                <hr className="my-4"></hr>
-                {/* <div className=" card-text text-danger fs-5">
-                  <span className=" fw-bold">Note: </span>If size and color are
-                  not selected, default size and color will be added.
-                </div> */}
+                <button
+                  className="btn btn-shop-cart btn-lg"
+                  type="submit"
+                  onClick={this.checkout}
+                >
+                  CHECKOUT
+                </button>
               </div>
             </div>
           </div>

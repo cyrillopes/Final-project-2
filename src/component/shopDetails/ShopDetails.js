@@ -10,6 +10,8 @@ import DetailSpecifications from "./DetailSpecifications";
 import ShopBtns from "./ShopBtns";
 import ShopImages from "./ShopImages";
 
+let ordersOutsideClass = [];
+
 const url = "https://paws-for-adoption.herokuapp.com/details";
 class ShopDetails extends Component {
   constructor() {
@@ -28,10 +30,16 @@ class ShopDetails extends Component {
   };
 
   handleClick = () => {
-    if (this.state.cart.includes(this.props.match.params.id)) return;
-    this.state.cart.push(this.props.match.params.id);
+    // if (this.state.cart.includes(this.props.match.params.id)) return;
+    // this.state.cart.push(this.props.match.params.id);
 
-    sessionStorage.setItem(`detailItems`, this.state.cart);
+    ordersOutsideClass.push(this.props.match.params.id);
+    // sessionStorage.setItem(`detailItems`, ordersOutsideClass);
+    console.log(ordersOutsideClass);
+  };
+
+  handleCartSubmit = () => {
+    sessionStorage.setItem(`detailItems`, ordersOutsideClass);
   };
 
   proceed = () => {
@@ -46,7 +54,10 @@ class ShopDetails extends Component {
     let { itemDetails } = this.state;
     return (
       <>
-        <NavMain />
+        <NavMain
+          ordersOutsideClass={ordersOutsideClass}
+          handleCartSubmit={this.handleCartSubmit}
+        />
         <section className="shop-details bg-light">
           <div className="container-fluid">
             <div className="row">
