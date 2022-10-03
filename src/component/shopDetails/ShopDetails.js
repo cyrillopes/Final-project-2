@@ -30,11 +30,11 @@ class ShopDetails extends Component {
   };
 
   handleClick = () => {
-    // if (this.state.cart.includes(this.props.match.params.id)) return;
-    // this.state.cart.push(this.props.match.params.id);
+    if (this.state.cart.includes(this.props.match.params.id)) return;
+    this.state.cart.push(this.props.match.params.id);
 
     ordersOutsideClass.push(this.props.match.params.id);
-    // sessionStorage.setItem(`detailItems`, ordersOutsideClass);
+    sessionStorage.setItem(`detailItems`, ordersOutsideClass);
     console.log(ordersOutsideClass);
   };
 
